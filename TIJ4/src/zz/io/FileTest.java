@@ -10,6 +10,8 @@ public class FileTest {
 		File file = new File("D:\\Java\\test.java");
 		System.out.println(dir.getCanonicalFile());
 		System.out.println(file.getCanonicalFile());
+		System.out.println(file.getAbsolutePath());
+		System.out.println(new File(".").getAbsolutePath());
 	}
 
 }
