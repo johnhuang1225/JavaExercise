@@ -1,16 +1,16 @@
-//: io/BasicFileOutput.java
+//: io/FileOutputShortcut.java
 package io;
 
 import java.io.*;
 
-public class BasicFileOutput {
-	static String file = "resource/BasicFileOutput.out";
+public class FileOutputShortcut {
+	static String file = "resource/FileOutputShortcut.out";
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader in = new BufferedReader(new StringReader(
-				BufferedInputFile.read("src/io/BasicFileOutput.java")));
-		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(
-				file)));
+				BufferedInputFile.read("src/io/FileOutputShortcut.java")));
+		// Here's the shortcut:
+		PrintWriter out = new PrintWriter(file);
 		int lineCount = 1;
 		String s;
 		while ((s = in.readLine()) != null)
